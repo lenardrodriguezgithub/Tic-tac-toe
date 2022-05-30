@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace Tic_Tac_Toe
 {
     public partial class Form1 : Form
@@ -8,7 +10,7 @@ namespace Tic_Tac_Toe
         }
         // variables
         public short count;
-        public short xcount=0, ocount=0;
+        public short xcount = 0, ocount = 0;
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -20,12 +22,12 @@ namespace Tic_Tac_Toe
             MenuPanel.Hide();
             PlayPanel.Show();
         }
-        
+
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        
+
         private void BackButton_Click(object sender, EventArgs e)
         {
             PlayPanel.Hide();
@@ -112,7 +114,7 @@ namespace Tic_Tac_Toe
         //clear buttons and clear turntext
         private void ClearButtons(object sender, EventArgs e)
         {
-            //enable button
+            //enable buttons
             button1.Enabled = true;
             button2.Enabled = true;
             button3.Enabled = true;
@@ -123,7 +125,7 @@ namespace Tic_Tac_Toe
             button8.Enabled = true;
             button9.Enabled = true;
 
-            //cleartext
+            //clear text
             button1.Text = " ";
             button2.Text = " ";
             button3.Text = " ";
@@ -133,17 +135,17 @@ namespace Tic_Tac_Toe
             button7.Text = " ";
             button8.Text = " ";
             button9.Text = " ";
-            
+
             //reset count
             count = 0;
             xcount = 0;
             ocount = 0;
 
-            //update score
+            //reset score
             xscore.Text = "0";
             oscore.Text = "0";
 
-            // reset turn
+            //reset turn
             showturn.Text = " ";
         }
 
