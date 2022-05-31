@@ -111,10 +111,10 @@ namespace Tic_Tac_Toe
             }
         }
 
-        //clear buttons and clear turntext
+        //clear buttons
         private void ClearButtons(object sender, EventArgs e)
         {
-            //enable buttons
+            //enable buttons and reset turn
             button1.Enabled = true;
             button2.Enabled = true;
             button3.Enabled = true;
@@ -136,17 +136,22 @@ namespace Tic_Tac_Toe
             button8.Text = " ";
             button9.Text = " ";
 
-            //reset count
+            //reset turn count
             count = 0;
+
+            //reset turn
+            showturn.Text = " ";
+        }
+
+        private void ResetScore(object sender, EventArgs e)
+        {
+            //reset count
             xcount = 0;
             ocount = 0;
 
             //reset score
             xscore.Text = "0";
             oscore.Text = "0";
-
-            //reset turn
-            showturn.Text = " ";
         }
 
 
@@ -223,6 +228,7 @@ namespace Tic_Tac_Toe
         private void ResetButton_Click(object sender, EventArgs e)
         {
             ClearButtons(sender, e);
+            ResetScore(sender, e);
         }
 
     }
